@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, Sparkles, Stars } from 'lucide-react';
-
 function App() {
   const [showMessage, setShowMessage] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
@@ -77,7 +76,7 @@ function App() {
           <div className="absolute -top-32 -left-32 w-52 h-52 animate-float">
             <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform rotate-12">
               <img 
-                src="src/photos/9a067e3e-fba4-4104-9a7a-26647c6d52d0.jpg" 
+                src="public/photos/9a067e3e-fba4-4104-9a7a-26647c6d52d0.jpg" 
                 alt="Couple 1"
                 className="w-full h-full object-cover"
               />
@@ -86,7 +85,7 @@ function App() {
           <div className="absolute -top-32 -right-32 w-52 h-52 animate-float-delay-1">
             <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform -rotate-12">
               <img 
-                src="src/photos/e728a6f7-b31a-477b-af48-5c853549210e.jpg" 
+                src="public/photos/e728a6f7-b31a-477b-af48-5c853549210e.jpg" 
                 alt="Couple 2"
                 className="w-full h-full object-cover"
               />
@@ -95,7 +94,7 @@ function App() {
           <div className="absolute -bottom-32 -left-32 w-52 h-52 animate-float-delay-2">
             <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform -rotate-12">
               <img 
-                src="src/photos/ff89a87c-4e45-4313-93f5-42ba67544075.jpg" 
+                src="public/photos/ff89a87c-4e45-4313-93f5-42ba67544075.jpg" 
                 alt="Couple 3"
                 className="w-full h-full object-cover"
               />
@@ -104,7 +103,7 @@ function App() {
           <div className="absolute -bottom-32 -right-32 w-40 h-40 animate-float-delay-3">
             <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform rotate-12">
               <img 
-                src="src/photos/IMG-20210623-WA0015.jpg" 
+                src="public/photos/IMG-20210623-WA0015.jpg" 
                 alt="Couple 4"
                 className="w-full h-full object-cover"
               />
