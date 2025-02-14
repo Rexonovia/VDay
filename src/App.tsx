@@ -100,7 +100,7 @@ function App() {
               />
             </div>
           </div>
-          <div className="absolute -bottom-32 -right-32 w-40 h-40 animate-float-delay-3">
+          <div className="absolute -bottom-32 -right-32 w-52 h-52 animate-float-delay-3">
             <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform rotate-12">
               <img 
                 src="/public/photos/IMG-20210623-WA0015.jpg" 
