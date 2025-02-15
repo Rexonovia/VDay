@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Heart, Sparkles, Stars } from 'lucide-react';
 
 function App() {
@@ -9,17 +9,20 @@ function App() {
   const loveMessages = [
     "You're the love of my life 💖",
     "My heart beats only for you 🫀",
+    "Love you to Infinity and Beyond 🚀",
     "You make every day brighter 🌟",
     "I'm forever grateful for you 🙏",
+    "Love you to Infinity and Beyond 🚀",
     "Your smile is my favorite sight 😊",
     "I cherish every moment with you ⏳",
+    "Love you to Infinity and Beyond 🚀",
     "You're my perfect match 💞",
     "My soul found its home in you 🏡"
   ];
 
   const [showMessage, setShowMessage] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  const [hearts, setHearts] = useState<{ id: number; x: number; y: number }[]>([]);
+  const [hearts, setHearts] = useState<{ id: number; x: number; y: number; sway: number }[]>([]);
 
   // Start the app (music and content)
   const startApp = () => {
@@ -42,17 +45,19 @@ function App() {
   };
 
   // Floating hearts animation
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setHearts((prevHearts) => {
         const newHearts = prevHearts.filter((heart) => heart.y > -100);
         if (newHearts.length < 10) {
           const x = Math.random() * window.innerWidth;
-          newHearts.push({ id: Date.now(), x, y: window.innerHeight });
+          const sway = Math.random() * 4 - 2; // Random sway between -2 and 2
+          newHearts.push({ id: Date.now(), x, y: window.innerHeight, sway });
         }
         return newHearts.map((heart) => ({
           ...heart,
-          y: heart.y - 2,
+          y: heart.y - 2, // Move upward
+          x: heart.x + heart.sway * 0.1, // Sway left or right
         }));
       });
     }, 50);
@@ -84,12 +89,12 @@ function App() {
           {hearts.map((heart) => (
             <div
               key={heart.id}
-              className="absolute text-white text-opacity-20 pointer-events-none"
+              className="absolute text-white text-opacity-50 pointer-events-none" 
               style={{
                 left: `${heart.x}px`,
                 top: `${heart.y}px`,
-                transform: 'scale(var(--scale))',
-                '--scale': Math.random() * 0.5 + 0.5,
+                transform: `scale(${Math.random() * 0.5 + 0.5})`, // Random scale
+                animation: `sway ${Math.random() * 2 + 3}s infinite alternate ease-in-out`, // Sway animation
               }}
             >
               ❤️
@@ -183,6 +188,16 @@ function App() {
           </footer>
         </div>
       )}
+
+      {/* CSS for sway animation */}
+      <style>
+        {`
+          @keyframes sway {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+          }
+        `}
+      </style>
     </div>
   );
 }
