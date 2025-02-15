@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Heart, Sparkles, Stars } from 'lucide-react';
+
 function App() {
   const [showMessage, setShowMessage] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [hearts, setHearts] = useState<{ id: number; x: number; y: number }[]>([]);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false); // Track if music is playing
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const loveMessages = [
     "You're the love of my life 💖",
@@ -37,10 +40,22 @@ function App() {
   const handleHeartClick = () => {
     setShowMessage(true);
     setCurrentMessageIndex((prev) => (prev + 1) % loveMessages.length);
+
+    // Start playing music on first interaction
+    if (!isMusicPlaying && audioRef.current) {
+      audioRef.current.volume = 0.5; // Set volume to 50%
+      audioRef.current.loop = true; // Loop the music
+      audioRef.current.play() // Play the music
+        .then(() => setIsMusicPlaying(true)) // Mark music as playing
+        .catch((error) => console.error("Error playing audio:", error)); // Handle errors
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-400 via-pink-500 to-purple-500 flex flex-col items-center justify-center p-8 overflow-hidden relative">
+      {/* Background Music */}
+      <audio ref={audioRef} src="public/music/m1.mp3" />
+
       {/* Floating Hearts Background */}
       {hearts.map(heart => (
         <div
