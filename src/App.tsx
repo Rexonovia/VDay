@@ -12,10 +12,8 @@ function App() {
     "Love you to Infinity and Beyond 🚀",
     "You make every day brighter 🌟",
     "I'm forever grateful for you 🙏",
-    "Love you to Infinity and Beyond 🚀",
     "Your smile is my favorite sight 😊",
     "I cherish every moment with you ⏳",
-    "Love you to Infinity and Beyond 🚀",
     "You're my perfect match 💞",
     "My soul found its home in you 🏡"
   ];
