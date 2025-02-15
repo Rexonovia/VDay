@@ -201,6 +201,55 @@ function App() {
               </p>
             </div>
           )}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-white mt-12">
+          <div className="p-6 bg-gradient-to-br from-pink-600/30 to-purple-600/30 rounded-2xl
+                         hover:scale-105 transition-transform duration-300 backdrop-blur-sm
+                         border border-white/10 shadow-xl">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <Heart className="w-6 h-6" fill="currentColor" />
+              Why I Love You:
+            </h2>
+            <ul className="space-y-3 text-lg">
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">❤️</span> Your kind heart
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">😊</span> The way you make even ordinary moments special
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">🌟</span> Your amazing personality
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">💫</span>
+                The joy you bring into my life
+              </li>
+            </ul>
+          </div>
+
+          <div className="p-6 bg-gradient-to-br from-rose-600/30 to-pink-600/30 rounded-2xl
+                         hover:scale-105 transition-transform duration-300 backdrop-blur-sm
+                         border border-white/10 shadow-xl">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <Stars className="w-6 h-6" />
+              My Promises:
+            </h2>
+            <ul className="space-y-3 text-lg">
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">🤲</span> Always cherish you
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">🌠</span> Support your dreams
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">🛡️</span> Be your safe place
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-200">∞</span> Love you endlessly
+              </li>
+            </ul>
+          </div>
+        </div>
+
 
           <footer className="text-white text-opacity-90 mt-12 space-y-4">
             <p className="text-2xl font-serif italic">
