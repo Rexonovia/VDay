@@ -144,7 +144,7 @@ function App() {
             <div className="absolute -top-32 -left-32 w-52 h-52 animate-float">
               <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl transform rotate-12">
                 <img
-                  src="https://github.com/Rexonovia/VDay/blob/main/public/photos/9a067e3e-fba4-4104-9a7a-26647c6d52d0.jpg?raw=true"
+                  src="https://github.com/Rexonovia/VDay/blob/main/public/photos/IMG_1711.JPG?raw=true"
                   alt="Couple 1"
                   className="w-full h-full object-cover"
                 />
