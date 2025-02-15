@@ -89,7 +89,7 @@ function App() {
           {hearts.map((heart) => (
             <div
               key={heart.id}
-              className="absolute text-white text-opacity-50 pointer-events-none" 
+              className="absolute text-white text-opacity-50 pointer-events-none"
               style={{
                 left: `${heart.x}px`,
                 top: `${heart.y}px`,
