@@ -78,7 +78,7 @@ function App() {
     }, 5000); // Change photo every 5 seconds
 
     return () => clearInterval(photoInterval);
-  }, [photos.length]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-400 via-pink-500 to-purple-500 flex flex-col items-center justify-center p-8 overflow-hidden relative">
