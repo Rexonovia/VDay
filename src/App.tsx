@@ -24,8 +24,9 @@ function App() {
 
   // Photo Carousel State
   const photos = [
-    "/public/display/1.jpg",
-    "/public/display/2.jpg"
+    "https://github.com/Rexonovia/VDay/blob/main/public/display/1.jpg?raw=true",
+    "https://github.com/Rexonovia/VDay/blob/main/public/display/2.jpg?raw=true",
+    "https://github.com/Rexonovia/VDay/blob/main/public/display/4.jpg?raw=true"
   ];
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
